@@ -3,75 +3,77 @@
   margin: 0;
   box-sizing: border-box;
 }
-html,body{
+
+html, body {
   height: 100%;
   width: 100%;
-
-}
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
-  background-color: #f9f9f9;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 
-.faq-section {
-  width: 90%;
-  max-width: 600px;
-  margin: 50px auto;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  padding: 20px;
+main {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3vw;
+  background-color: #000000;
 }
 
-.faq-section h1 {
+.faq-sec {
+  width: 80%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+}
+
+.faq-sec h2 {
   text-align: center;
-  color: #333;
-  margin-bottom: 20px;
+  font-size: 2.7em;
+text-shadow: 0 3px 5px yellow;
+  margin-bottom: 1em;
+  color: #ffffff;
 }
 
 .faq-item {
-  border-bottom: 1px solid #ddd;
-  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5vw;
+  padding: 1.5vw;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.8s ease;
 }
 
-.faq-item:last-child {
-  border-bottom: none;
+.faq-item:hover {
+  background-color: #e0f7fa;
 }
 
-.faq-toggle {
+.faq-que {
+  font-size: 1.6em;
+  font-weight: bold;
+  color: #004941;
+  cursor: pointer;
+  padding: 0.5vw 0;
+}
+
+.faq-item input[type="checkbox"] {
   display: none;
 }
 
-.faq-question {
+.faq-ans {
+  display: none;
+  font-size: 1.3em;
+  color: #303030;
+  padding: 0.5vw 0;
+  transition: all 0.3s ease;
+}
+
+.faq-item input[type="checkbox"]:checked ~ .faq-ans {
   display: block;
-  padding: 15px;
-  font-size: 16px;
-  color: #333;
-  font-weight: bold;
-  cursor: pointer;
-  background-color: #f1f1f1;
-  border-radius: 5px;
 }
 
-.faq-question:hover {
-  background-color: #e1e1e1;
-}
-
-.faq-answer {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
-  padding: 0 15px;
-  font-size: 14px;
-  color: #555;
-}
-
-.faq-toggle:checked + .faq-question + .faq-answer {
-  max-height: 100px; /* Set a value large enough to display the content */
-  padding: 10px 15px;
-  border-left: 3px solid #4CAF50;
+.faq-item input[type="checkbox"]:checked ~ .faq-que {
+  color: #004d40;
 }
