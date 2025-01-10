@@ -7,55 +7,69 @@
 html, body {
   height: 100%;
   width: 100%;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
+  color: #302f2f;
 }
 
 main {
-  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 3vw;
-  background-color: #000000;
+
+  padding: 2rem;
 }
 
 .faq-sec {
-  width: 80%;
+  width: 90%;
+  max-width: 800px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 2px 8px 30px rgba(0, 0, 0, 0.1);
+  padding: 2.5rem;
+  transition: transform 0.3s;
+}
 
-  display: flex;
-  flex-direction: column;
-  gap: 2vw;
+.faq-sec:hover {
+  transform: scale(1.02);
 }
 
 .faq-sec h2 {
   text-align: center;
-  font-size: 2.7em;
-text-shadow: 0 3px 5px yellow;
+  font-size: 2.8em;
+  padding-top: 4rem;
   margin-bottom: 1em;
-  color: #ffffff;
+  color: #00796b;
+  text-shadow: 0 4px 8px rgba(0, 121, 107, 0.3);
 }
 
 .faq-item {
   display: flex;
   flex-direction: column;
-  gap: 1.5vw;
-  padding: 1.5vw;
+  gap: 1rem;
+  padding: 1.5rem;
   background-color: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.8s ease;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s;
 }
 
 .faq-item:hover {
-  background-color: #e0f7fa;
+  background-color: #e0f2f1;
+  transform: translateY(-3px);
 }
 
 .faq-que {
   font-size: 1.6em;
-  font-weight: bold;
-  color: #004941;
+  font-weight: 600;
+  color: #004d40;
   cursor: pointer;
-  padding: 0.5vw 0;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.faq-que:hover {
+  color: #00796b;
+  transform: scale(1.02);
 }
 
 .faq-item input[type="checkbox"] {
@@ -64,9 +78,9 @@ text-shadow: 0 3px 5px yellow;
 
 .faq-ans {
   display: none;
-  font-size: 1.3em;
-  color: #303030;
-  padding: 0.5vw 0;
+  font-size: 1.2em;
+  color: #525050;
+  padding: 0.5rem 0;
   transition: all 0.3s ease;
 }
 
@@ -75,5 +89,6 @@ text-shadow: 0 3px 5px yellow;
 }
 
 .faq-item input[type="checkbox"]:checked ~ .faq-que {
-  color: #004d40;
+  color: #00796b;
+  font-weight: 700;
 }
